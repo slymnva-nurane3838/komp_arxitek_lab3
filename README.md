@@ -1,1 +1,0 @@
-# komp_arxitek_lab3

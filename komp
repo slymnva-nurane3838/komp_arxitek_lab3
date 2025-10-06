@@ -1,0 +1,48 @@
+Çoxprosessorlu hesablama sistemləri — iki və ya daha çox CPU-nun eyni anda işlədiyi və məlumatları paylaşaraq paralel hesablama aparan kompüter sistemləridir. Bu sistemlər yüksək hesablama gücü tələb edən proqramlar üçün nəzərdə tutulub, məsələn:
+•	Elmi simulyasiyalar (məsələn, hava proqnozu modelləri)
+•	Böyük məlumatların emalı və analizləri (Big Data, AI tətbiqləri)
+•	Serverlər və məlumat mərkəzləri
+•	Maliyyə modelləşdirilməsi və digər yüksək performans tələb edən sahələr
+Çoxprosessorlu sistemlər müstəqil və ya paralel işləyən prosessorlar vasitəsilə tapşırıqları eyni vaxtda yerinə yetirir, bu da əməliyyat sürətini və sistemin etibarlılığını artırır.
+
+Əsas komponentlər və funksiyaları
+1.	Prosessorlar (CPU-lar):
+o	Sistem bir neçə CPU-dan ibarətdir.
+o	CPU-lar simmetrik (SMP) və ya asimmetrik (AMP) ola bilər:
+	SMP: Bütün prosessorlar eyni yaddaşa və I/O qurğularına bərabər çıxışa malikdir. Tapşırıqlar bərabər paylanır.
+	AMP: Bir prosessor əsas idarəetməni həyata keçirir, digərləri isə xüsusi tapşırıqları icra edir.
+o	Prosessorlar həm müstəqil, həm də paralel işləyə bilər, bu da hesablama sürətini artırır.
+2.	Paylaşılan Yaddaş (Shared Memory):
+o	CPU-lar arasında məlumat mübadiləsini təmin edir.
+o	Bütün prosessorlar məlumatı oxuya və yaza bilir.
+o	Yaddaşda həmçinin cache səviyyələri (L1, L2, L3) mövcuddur ki, tez-tez istifadə olunan məlumatlara çıxış sürətli olsun.
+3.	Giriş/Çıxış Qurğuları (I/O Devices):
+o	Disklər, şəbəkə interfeysləri, monitor, klaviatura və digər periferik qurğular.
+o	Bu qurğular ya prosessorlar arasında paylaşılan, ya da ayrı-ayrı CPU-lara bağlı ola bilər.
+o	I/O qurğuları sistemin istifadəçi və xarici mühitlə əlaqəsini təmin edir.
+4.	Birləşdirici Şəbəkə (Interconnect):
+o	Prosessorlar, yaddaş və I/O qurğuları arasında məlumat ötürülməsini təmin edir.
+o	Üç əsas tipi var:
+	Bus (Şinə): Sadə, amma böyük sistemlərdə yavaş ola bilər.
+	Crossbar Switch: Hər CPU və yaddaşın birbaşa birləşməsi, sürətli, lakin bahalıdır.
+	Mesh və Hypercube Şəbəkələri: Böyük çoxprosessorlu sistemlərdə paralel məlumat ötürülməsi üçün istifadə olunur.
+5.	Kontrol Vahidləri (Control Units):
+o	Prosessorlar və digər qurğuları idarə edir.
+o	Tapşırıqların düzgün ardıcıllıqla icrasını təmin edir, yaddaş və I/O qurğularına çıxışı nəzarət edir.
+o	Prosessorlar arasında sinxronizasiyanı və resursların ədalətli paylanmasını təmin edir.
+6.	Sinxronizasiya Mexanizmləri:
+o	Çoxprosessorlu sistemlərdə CPU-lar eyni yaddaşa çıxış etdikdə məlumat ziddiyyətinin qarşısını almaq üçün sinxronizasiya mexanizmləri istifadə olunur.
+o	Misal: lock, semaphore, barrier mexanizmləri.
+
+Çoxprosessorlu Sistemlərin Üstünlükləri:
+•	Yüksək performans: Paralel işləmə tapşırıqları daha sürətli yerinə yetirir.
+•	Etibarlılıq: Bir CPU sıradan çıxdıqda digərləri işləməyə davam edə bilir.
+•	Genişlənə bilənlik: Sistemə əlavə prosessorlar əlavə etməklə performans artırıla bilər.
+•	Effektiv resurs istifadəsi: Eyni anda bir neçə tapşırıq bloklanmadan icra olunur.
+•	Qüvvətli elmi və texnoloji tətbiqlər: Böyük və mürəkkəb hesablamaları asanlıqla yerinə yetirir.
+
+Çoxprosessorlu sistemlərin növləri
+•	Simmetrik Multiprosessor (SMP): Bütün CPU-lar eyni yaddaşa və I/O qurğularına bərabər çıxışa malikdir.
+•	Asimmetrik Multiprosessor (AMP): Bir CPU idarəetməni həyata keçirir, digərləri xüsusi tapşırıqları icra edir.
+•	Massively Parallel Processing (MPP): Hər prosessorın öz yaddaşı var, böyük verilənlər bazası və mürəkkəb problemlər üçün nəzərdə tutulub.
+•	Cluster sistemləri: Bir-birindən müstəqil kompüterlərin şəbəkəyə qoşulması ilə əmələ gələn sistemlər.
